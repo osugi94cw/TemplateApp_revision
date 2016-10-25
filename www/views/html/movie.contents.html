@@ -1,0 +1,25 @@
+<!-- コンテンツ画面 -->
+<ons-page modifier="app" id="con" ng-controller="MovieContentsCtrl as mov">
+
+    <!-- ヘッダー領域 -->
+    <header id="header">
+        <!-- ナビゲーションバー -->
+        <ons-toolbar modifier="app" class="contentsNavigationBar">
+            <div class="left">
+                <ons-button class="backbutton" modifier="backButton" ng-click="navi.popPage({animation:'slide'})"><label><  Back</label></ons-button>
+            </div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </ons-toolbar>
+    </header>
+    
+    
+    <!-- コンテンツ領域 -->
+    <section id="contentsArea">
+        
+        <!-- Youtubeの表示 -->
+        <div class="contents">
+            <iframe width="100%" height="100%" src="{{mov.url}}" frameborder="0" allowfullscreen ng-cloak></iframe>
+        </div>
+    </section>
+</ons-page>

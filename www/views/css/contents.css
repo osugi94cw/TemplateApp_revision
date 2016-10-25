@@ -1,0 +1,22 @@
+#con header#header {
+    margin-bottom: 30%;
+}
+
+
+/* コンテンツ領域 */
+
+section#contentsArea {
+    width: 100%;
+    height: 70%;
+    background-color: white;
+}
+
+
+/* コンテンツ */
+
+.contents {
+    width: 100%;
+    height: 65%;
+    text-align: center;
+    background-color: #f8f8f8;
+}
