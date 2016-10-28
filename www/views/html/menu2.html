@@ -1,0 +1,55 @@
+<ons-page modifier="menu">
+    <div class="" style="background: url('views/img/menu/background.jpg')">
+        
+    
+
+        <section class="title">
+            <div>
+                <img src="views/img/menu/logo.jpg" alt="" />
+            </div>
+        </section>
+        
+        <section class="news">
+            <div>
+                <img src="views/img/menu/information.jpg" alt="" />
+            </div>
+            
+            <ons-button ng-click="news.show($event)">更新情報</ons-button>
+            <ons-popover var="news" direction="down" cancelable>
+                <ons-list>
+                    <ons-list-item modifier="tappable">更新内容1</ons-list-item>
+                    <ons-list-item modifier="tappable">更新内容2</ons-list-item>
+                    <ons-list-item modifier="tappable">更新内容3</ons-list-item>
+                </ons-list>
+            </ons-popover>
+        </section>
+            
+        <section class="buttonArea">
+            <section class="movieLibrary">
+                <div>
+                    <img src="views/img/menu/girl.png" alt="" />
+                </div>
+            </section>
+            <section class="information">
+                <div>
+                    <img src="views/img/menu/boy.png" alt="" />
+                </div>
+            </section>
+        </section>
+        
+        <section class="faq">
+
+                    <ons-button>FAQ</ons-button>
+
+        </section>
+    
+    </div>
+    
+    <ons-bottom-toolbar class="footer">
+        <div class="center">
+            <img src="views/img/menu/footer.jpg" alt="aaaaas" />
+        </div>
+    </ons-bottom-toolbar>
+    
+
+</ons-page>

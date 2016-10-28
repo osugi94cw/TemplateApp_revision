@@ -1,0 +1,91 @@
+/* This is a CSS file */
+
+.page--menu__background{
+    /*background: url('./../img/menu/background.jpg');*/
+}
+
+.page--menu{
+    height: 100%;
+    width: 100%;
+}
+
+
+div.menu{
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    width: 100%;
+    height: 1%;
+    /*background-color: yellow;*/
+}
+.title div{
+    height: 100%;
+    width: 100%;
+}
+.title div img{
+    width:100%;
+    height:1%;
+}
+.news{
+    width: 100%;
+    height: 15%;
+    /*background-color: green;*/
+    text-align: center;
+}
+.news div{
+    width: 40%;
+    height: 65%;
+    text-align: center;
+}
+.news div img{
+    width: 100%;
+    height: auto;
+}
+.buttonArea{
+    width: 100%;
+    height: 30%;
+    background-color: black;
+}
+.buttonArea .movieLibrary{
+    height: 50%;
+    width: 100%;
+}
+.movieLibrary div{
+    height: 100%;
+    width: 50%;
+}
+.movieLibrary div img{
+    width: 100%;
+    height: auto;
+}
+.buttonArea .information{
+    height: 50%;
+}
+.information div{
+    height: 100%;
+    width: 50%;
+}
+.information div img{
+    width: 100%;
+    height: auto;
+}
+.faq{
+    width: 100%;
+}
+
+
+.footer{
+    width: 100%;
+    height: 10%;
+    background-image: url("views/img/menu/footer.jpg");
+}
+.footer .center{
+    width: 100%;
+    height: 100%;
+}
+.footer .center img{
+    width: 100%;
+    height: 100%;
+}
