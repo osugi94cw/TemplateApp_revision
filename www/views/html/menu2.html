@@ -1,5 +1,5 @@
 <ons-page modifier="menu">
-    <div class="" style="background: url('views/img/menu/background.jpg')">
+    <div class="menuDiv" style="background: url('views/img/menu/background.jpg')">
         
     
 
@@ -13,8 +13,9 @@
             <div>
                 <img src="views/img/menu/information.jpg" alt="" />
             </div>
-            
-            <ons-button ng-click="news.show($event)">更新情報</ons-button>
+            <div>
+                <ons-button ng-click="news.show($event)">更新情報</ons-button>
+            </div>
             <ons-popover var="news" direction="down" cancelable>
                 <ons-list>
                     <ons-list-item modifier="tappable">更新内容1</ons-list-item>

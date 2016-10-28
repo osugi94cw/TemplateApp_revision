@@ -4,48 +4,62 @@
     /*background: url('./../img/menu/background.jpg');*/
 }
 
-.page--menu{
-    height: 100%;
-    width: 100%;
+div.menuDiv{
+
 }
 
 
-div.menu{
-    height: 100%;
-    width: 100%;
-}
+
 
 .title{
     width: 100%;
-    height: 1%;
-    /*background-color: yellow;*/
+    height: 15%;
+    background-color: yellow;
 }
 .title div{
     height: 100%;
     width: 100%;
+    text-align: center;
 }
 .title div img{
-    width:100%;
-    height:1%;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
 }
+
+
+
 .news{
     width: 100%;
     height: 15%;
     /*background-color: green;*/
     text-align: center;
 }
-.news div{
-    width: 40%;
+.news div:first-child{
+    width: 100%;
     height: 65%;
     text-align: center;
 }
-.news div img{
+.news div:nth-child(2){
+    height: 35%;
     width: 100%;
-    height: auto;
+}
+
+
+.news div img{
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}
+.news div ons-button{
+    height: 100%;
+    width: 70%;
 }
 .buttonArea{
     width: 100%;
-    height: 30%;
+    height: 50%;
     background-color: black;
 }
 .buttonArea .movieLibrary{
@@ -54,22 +68,27 @@ div.menu{
 }
 .movieLibrary div{
     height: 100%;
-    width: 50%;
+    width: 100%;
 }
 .movieLibrary div img{
-    width: 100%;
-    height: auto;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
 }
 .buttonArea .information{
     height: 50%;
 }
 .information div{
     height: 100%;
-    width: 50%;
+    width: 100%;
+    text-align: right;
 }
 .information div img{
-    width: 100%;
-    height: auto;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
 }
 .faq{
     width: 100%;
