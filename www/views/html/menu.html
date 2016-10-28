@@ -1,0 +1,97 @@
+<!-- メニュー画面 -->  
+<ons-page modifier="app" id="menu" ng-controller="MenuCtrl as menu">
+
+        
+    <!-- ヘッダー領域 -->
+    <header id="menuHeader">
+        <label class="menuTitle">タイトル</label>
+    </header>
+    
+    
+    <!-- コンテンツ領域 -->
+    <section id="menuContentsArea">
+        <ons-button ng-click="menu.test()">position_information</ons-button>
+        <!--<div id="map">
+            <iframe src="http://maps.google.co.jp/maps?q=loc:35.1434025,138.8626171&iwloc=J&output=embed" width="100%" height="90%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>-->
+    </section>
+    
+    
+    <!-- ライブラリー選択ボタン領域 -->
+    <section id="libraryButtonArea" ng-controller="LibraryButtonCtrl as libbtn">
+    
+        <!-- エリア1 -->
+        <section class="menuLibraryButtonArea1">
+            <!-- 見出し -->
+            <div class="menuLibraryHeadline">
+                <p>見出し1</p>
+            </div>
+            
+            <!-- ボタン -->
+            <ons-row class="menuLibraryButton">
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L001')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-a.png" alt="" /></div>
+                        <div class="db"><label>Library A</label></div>
+                    </ons-button>
+                </ons-col>
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L002')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-b.png" alt="" /></div>
+                        <div class="db"><label>Library B</label></div>
+                    </ons-button>
+                </ons-col>
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L003')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-c.png" alt="" /></div>
+                        <div class="db"><label>Library C</label></div>
+                    </ons-button>
+                </ons-col>
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L004')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-d.png" alt="" /></div>
+                        <div class="db"><label>Library D</label></div>
+                    </ons-button>
+                </ons-col>
+            </ons-row>       
+        </section>
+        
+        <!-- エリア2 -->
+        <section class="menuLibraryButtonArea2">
+            <!-- 見出し -->
+            <div class="menuLibraryHeadline">
+                <p>見出し2</p>
+            </div>
+            
+            <!-- ボタン -->
+            <ons-row class="menuLibraryButton">
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L005')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-e.png" alt="" /></div>
+                        <div class="db"><label>Library E</label></div>
+                    </ons-button>
+                </ons-col>
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L006')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-f.png" alt="" /></div>
+                        <div class="db"><label>Library F</label></div>
+                    </ons-button>
+                </ons-col>
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L007')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-g.png" alt="" /></div>
+                        <div class="db"><label>Library G</label></div>
+                    </ons-button>
+                </ons-col>
+                <ons-col>
+                    <ons-button modifier="appbtn" ng-click="libbtn.menuTransition('L008')">
+                        <div class="da"><img src="views/img/menu/menu_library-button_library-h.png" alt="" /></div>
+                        <div class="db"><label>Library H</label></div>
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+            
+        </section>
+    </section>
+    
+</ons-page>

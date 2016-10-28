@@ -12,50 +12,51 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="scripts/app.module.js"></script>
+    
+    <script src="scripts/controllers/menu.controller.js"></script>
+    <script src="scripts/controllers/library.controller.js"></script>
+    <script src="scripts/controllers/movie.contents.controller.js"></script>
+    <script src="scripts/controllers/app.controller.js"></script>
+    
+    
+    <script src="scripts/services/transition.service.js"></script>
+    <script src="scripts/services/connection.service.js"></script>
+    <script src="scripts/services/get.library.data.service.js"></script>
+    
+    
+    <script src="scripts/directives/repeatfinished.directive.js"></script>
+    
+    <script src="scripts/services/ncmb.initial.setting.js"></script>
+    <script src="scripts/services/device.check.js"></script>
+    <script src="scripts/services/calc.gcd.js"></script>
+    <script src="scripts/services/calc.ratio.js"></script>
+    <script src="scripts/services/change.to.vertical.css.js"></script>
+    <script src="scripts/services/change.to.horizontal.css.js"></script>
+    <script src="scripts/services/change.orientation.js"></script>
+    <script src="scripts/services/shared.state.js"></script>
+    
+    <script src="scripts/services/convert.library.values.js"></script>
+    <script src="scripts/services/convert.movie.contents.values.js"></script>
+    
+    <link rel="stylesheet" href="views/css/common.css">
+    <link rel="stylesheet" href="views/css/menu.css">
+    <link rel="stylesheet" href="views/css/library.css">
+    <link rel="stylesheet" href="views/css/contents.css">
 
     <script>
-        ons.bootstrap()
-          .controller('AppController', function() {
-            this.pushes = 0;
-            this.pops = 0;
-          });
-        ons.ready(function() {
-            console.log("Onsen UI is ready!");
-        });
     </script>
 </head>
-<body>
-    <ons-page>
+<body ng-controller="AppCtrl as app" id="appBody">
+
+    <ons-page class="basicPage" id="basicPage">
         <ons-navigator
           var="navi"
-          page="page.html"
-          ng-controller="AppController as app"
-          ons-postpush="app.pushes = app.pushes + 1"
-          ons-postpop="app.pops = app.pops + 1">
+          page="views/html/menu.html">
         </ons-navigator>
     </ons-page>
 
-    <ons-template id="page.html">
-      <ons-page>
-        <ons-toolbar>
-          <div class="left">
-            <ons-back-button>Back</ons-back-button>
-          </div>
-          <div class="center">Navigation</div>
-        </ons-toolbar>
-
-        <section style="padding: 10px">
-          <ons-button ng-click="navi.pushPage('page.html')">
-            Push Page
-          </ons-button>
-
-          <p>
-            You have pushed {{ app.pushes }} times and popped {{ app.pops }} times.
-          </p>
-        </section>
-      </ons-page>
-    </ons-template>
 
 </body>
 </html>

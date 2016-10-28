@@ -1,0 +1,77 @@
+/* ライブラリー概要領域 */
+
+section#libraryOverviewArea {
+    width: 100%;
+    /*height: 42%;*/
+    margi-bottom: 5%;
+    background-color: white;
+}
+
+
+/* タイトル画像の領域 */
+
+ons-row.libraryTitlePicture {
+    width: 100%;
+    height: 70%;
+    padding-bottom: 5%;
+}
+
+
+/* タイトル画像*/
+
+.libraryTitlePicture img {
+    width: 100%;
+    height: auto%;
+}
+
+
+/* 概要 */
+
+ons-row.libraryOverview {
+    width: 90%;
+    height: 30%;
+    font-size: 5vw;
+    padding-bottom: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+/* コンテンツリスト領域 */
+
+section#libraryContentsListArea {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* コンテンツリスト */
+
+div.libraryContentsList {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+}
+
+
+/* リストアイテム */
+
+.libraryContentsListItem {
+    margin: 1%;
+    padding: 0;
+    line-height: 0;
+    background-color: white;
+}
+.libraryContentsListItem ons-button{
+    font-size: 3.5vw;
+}
+
+
+
+/* アイテム内画像 */
+
+.libraryContentsListItem img {
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+}
