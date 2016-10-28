@@ -8,9 +8,9 @@ ons.bootstrap('templateApp',['menuModule','libraryModule','contentsModule','calc
 
 angular.module('menuModule', ['transitionModule','calcModule']);
 
-angular.module('libraryModule', ['transitionModule','connectionModule','repeatFinishedModule','ncmbModule', 'deviceCheckModule','calcModule','shareModule']);
+angular.module('libraryModule', ['transitionModule','connectionModule','repeatFinishedModule','ncmbModule', 'deviceCheckModule','calcModule','shareModule','convertValuesModule']);
 
-angular.module('contentsModule', ['connectionModule', 'deviceCheckModule','calcModule']);
+angular.module('contentsModule', ['connectionModule', 'deviceCheckModule','calcModule','convertValuesModule']);
 
 
 //孫モジュール
@@ -34,4 +34,4 @@ angular.module('resizeModule', ['calcModule']);
 
 angular.module('shareModule', []);
 
-
+angular.module('convertValuesModule', []);

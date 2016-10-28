@@ -4,14 +4,19 @@
 ** ビューへの反映が終了するとインジケータを非表示にする。
 */
 
-function LibraryCtrl($scope,GetLibraryData,ConnectionService,DeviceCheck,calcRatio,SharedState,$rootScope){
+function LibraryCtrl($scope,GetLibraryData,ConnectionService,DeviceCheck,calcRatio,SharedState,$rootScope,ConvertlibraryValues){
     var vm = this; //this コンテキストを、ViewModel を意味する vm として保持する
     
     var device = DeviceCheck;
     if(device != "pc"){
         vm.checkConnection = new ConnectionService(); //接続確認サービスの呼び出し
     }
-    var libraryId = navi.topPage.pushedOptions.data.param1; //受け取ったパラメータを代入
+    
+    var libraryValues = ConvertlibraryValues;
+    
+    // console.log(JSON.stringify(libraryValues));  /*受け取った値の確認用*/
+    
+    var libraryId = libraryValues.libraryId; //受け取ったパラメータを代入
     document.querySelector("#myModal").show(); //インジケータを表示
     
     vm.getLibraryData = new GetLibraryData(libraryId); //ライブラリー画面のデータを取得するサービスの呼び出し
@@ -112,5 +117,5 @@ function ContentsListCtrl(TransitionService,DeviceCheck){
 
 angular
     .module('libraryModule')
-    .controller('LibraryCtrl', ['$scope', 'GetLibraryData','ConnectionService','DeviceCheck','calcRatio','SharedState','$rootScope', LibraryCtrl])
+    .controller('LibraryCtrl', ['$scope', 'GetLibraryData','ConnectionService','DeviceCheck','calcRatio','SharedState','$rootScope','ConvertlibraryValues', LibraryCtrl])
     .controller('ContentsListCtrl', ['TransitionService','DeviceCheck', ContentsListCtrl]); 
