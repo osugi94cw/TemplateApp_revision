@@ -34,13 +34,7 @@ function MenuCtrl(calcRatio){
             console.log(err);
         }
     }
-    
-   
-   
-    
-
 }
-
 
 //コントローラーの定義
 angular

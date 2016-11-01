@@ -48,6 +48,13 @@
     <link rel="stylesheet" href="views/css/menu2.css">
 
     <script>
+        ons.disableAutoStatusBarFill();
+        ons.ready(function(){
+            if (window.device.platform === 'iOS' && parseFloat(window.device.version) >= 7.0)
+            {
+                document.body.style.marginTop = "20px";
+            }
+        }); 
     </script>
 </head>
 <body ng-controller="AppCtrl as app" id="appBody">
