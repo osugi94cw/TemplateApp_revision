@@ -6,7 +6,7 @@ function ConvertlibraryValues(){
     var libraryValues = {};
     
     libraryValues = {
-        libraryId: navi.topPage.pushedOptions.data.param1
+//        libraryId: navi.topPage.pushedOptions.data.param1
         
     }
         return libraryValues;

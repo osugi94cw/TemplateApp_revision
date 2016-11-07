@@ -12,11 +12,13 @@ function LibraryCtrl($scope,GetLibraryData,ConnectionService,DeviceCheck,calcRat
         vm.checkConnection = new ConnectionService(); //接続確認サービスの呼び出し
     }
     
+    
+    
     var libraryValues = ConvertlibraryValues;
     
     // console.log(JSON.stringify(libraryValues));  /*受け取った値の確認用*/
     
-    var libraryId = libraryValues.libraryId; //受け取ったパラメータを代入
+    var libraryId = navi.topPage.pushedOptions.data.param1; //受け取ったパラメータを代入
     document.querySelector("#myModal").show(); //インジケータを表示
     
     vm.getLibraryData = new GetLibraryData(libraryId); //ライブラリー画面のデータを取得するサービスの呼び出し

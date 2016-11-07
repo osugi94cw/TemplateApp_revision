@@ -36,8 +36,30 @@ function MenuCtrl(calcRatio){
     }
 }
 
+function MenuController(TransitionService){
+    
+    this.trantisionFromMenu = function(pageName,value){
+        if(pageName == 'movieList'){
+            var target = 'views/html/library.html';
+        }
+        else if(pageName == 'news'){
+            var target = 'views/html/news.html';
+        }
+        else if(pageName == 'pdfList'){
+            var target = '';
+        }
+        else if(pageName == 'faq'){
+            var target = 'views/html/faq.html';
+        }
+        var passingValue = value;
+        this.screenTransition = new TransitionService(target, passingValue);
+    }
+    
+}
+
 //コントローラーの定義
 angular
     .module('menuModule')
     .controller('LibraryButtonCtrl', ['TransitionService', LibraryButtonCtrl])
-    .controller('MenuCtrl', ['calcRatio', MenuCtrl]);
+    .controller('MenuCtrl', ['calcRatio', MenuCtrl])
+    .controller('MenuController', ['TransitionService',MenuController]);

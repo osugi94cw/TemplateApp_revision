@@ -36,18 +36,14 @@ div.menuDiv{
 
 .news{
     width: 100%;
-    height: 20%;
-    /*background-color: green;*/
+    height: 15%;
     text-align: center;
 }
-.news div:first-child{
-    width: 100%;
-    height: 65%;
+.news .info{
+    width: 60%;
+    height: 100%;
+    margin: 0 20%;
     text-align: center;
-}
-.news div:nth-child(2){
-    height: 35%;
-    width: 100%;
 }
 .news div img{
     width:auto;
@@ -55,18 +51,16 @@ div.menuDiv{
     max-width:100%;
     max-height:100%;
 }
-.news div ons-button{
-    height: 100%;
-    width: 70%;
-}
+
+
 
 
 
 .buttonArea{
     width: 100%;
-    height: 55%;
+    height: 60%;
 }
-.buttonArea .movieLibrary_01{
+/*.buttonArea .movieLibrary_01{
     height: 50%;
     width: 100%;
     text-align: left;
@@ -128,7 +122,7 @@ div.icon_01{
     height:auto;
     max-width:100%;
     max-height:100%;
-}
+}*/
 
 
 
@@ -136,12 +130,12 @@ div.icon_01{
     width: 100%;
     height: 10%; 
 }
-.faq div{
-    width: 100%;
+.faq .faqButton{
+    width: 20%;
     height: 100%;
-    text-align: right;
+    margin-left: 80%;
 }
-.faq div img{
+.faq .faqButton img{
     width:auto;
     height:auto;
     max-width:100%;
@@ -193,12 +187,8 @@ div.icon_01{
 
 
 
-.buttonArea{
-    width: 100%;
-    height: 55%;
-}
 .buttonArea .movieLibrary_02{
-    height: 50%;
+    height: 55%;
     width: 100%;
     text-align: left;
     margin-bottom: 3%;
@@ -214,35 +204,33 @@ div.icon_01{
 
 div.icon_02{
     height: 100%;
-    width: 45%;
+    width: 50%;
     padding-top: 1%;
     padding-bottom: 1%;
     display:inline-block;
     text-align: center;
 }
 
-.movieLibrary_02 .icon_02 div:first-child{
+.sports{
     height: 50%;
-    width: 45%;
-    display:inline-block;
-    margin-right: 5%;
-}
-.movieLibrary_02 .icon_02 div:nth-child(2){
-    height: 50%;
-    width: 45%;
+    width: 48%;
     display:inline-block;
 }
-.movieLibrary_02 .icon_02 div:nth-child(3){
+.culture{
     height: 50%;
-    width: 45%;
+    width: 48%;
+    display:inline-block;
+}
+.schoolLife{
+    height: 50%;
+    width: 48%;
     display:inline-block;
     margin-left: -35%;
-    margin-right: 5%;
 }
 
-.movieLibrary_02 .icon_02 div:nth-child(4){
+.activity{
     height: 50%;
-    width: 45%;
+    width: 48%;
     display:inline-block;
 }
 .movieLibrary_02 img{
@@ -267,29 +255,28 @@ div.icon_02{
     display:inline-block;
 }
 
-.information_02 .icon_02 div:first-child{
+.event{
     height: 50%;
-    width: 45%;
+    width: 48%;
     display:inline-block;
-    margin-right: 5%;
 }
-.information_02 .icon_02 div:nth-child(2){
+.article{
     height: 50%;
-    width: 45%;
+    width: 48%;
     display:inline-block;
-        margin-right: -35%;
+    margin-right: -45%;
 }
-.information_02 .icon_02 div:nth-child(3){
+.examination{
     height: 50%;
-    width: 45%;
+    width: 48%;
     display:inline-block;
-    margin-right: 5%;
 }
 
-.information_02 .icon_02 div:nth-child(4){
+.map{
     height: 50%;
-    width: 45%;
+    width: 48%;
     display:inline-block;
+    margin-right: -10%;
 }
 
 .information_02 img{
@@ -303,6 +290,24 @@ div.icon_02{
 
 
 
+/*commonに移動*/
+
+
+.button--menuButton {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.button--menuButton:active {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+}
 
 
 
@@ -312,10 +317,7 @@ div.icon_02{
 
 
 
-
-
-
-.buttonArea .movieLibrary_03{
+/*.buttonArea .movieLibrary_03{
     height: 50%;
     width: 100%;
     text-align: left;
@@ -402,115 +404,4 @@ div.icon_02{
     height:auto;
     max-width:100%;
     max-height:100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.buttonArea{
-    width: 100%;
-    height: 55%;
-}
-.buttonArea .movieLibrary_03{
-    height: 50%;
-    width: 100%;
-    text-align: left;
-}
-
-
-
-
-
-
-.movieLibrary_03 img{
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
-}
-
-
-
-.buttonArea .information_03{
-    height: 50%;
-    width: 100%;
-    text-align: right;
-}
-
-.information_03 div.human_03{
-    height: 55%;
-    width: 90%;
-    margin-right: 5%;
-    vertical-align: top;
-}
-
-.information_03 div.icon_03{
-    height: 40%;
-    width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    display:inline-block;
-    text-align: center;
-}
-
-.information_03 .icon_03 div:first-child{
-    height: 100%;
-    width: 18%;
-    position: absolute;
-    display: block;
-    margin-left: 5%;
-    margin-top: -5%;
-}
-.information_03 .icon_03 div:nth-child(2){
-    height: 100%;
-    width: 18%;
-    position: absolute;
-    display: block;
-    margin-left: 30%;
-
-}
-.information_03 .icon_03 div:nth-child(3){
-    height: 100%;
-    width: 18%;
-    position: absolute;
-    display: block;
-    margin-left: 55%;
-    margin-top: -5%;
-}
-
-.information_03 .icon_03 div:nth-child(4){
-    height: 100%;
-    width: 18%;
-    position: absolute;
-    display: block;
-    margin-left: 80%;
-
-}
-.information_03 img{
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
 }*/
-
-
-
-
-
-
-
-
-

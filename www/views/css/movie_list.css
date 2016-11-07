@@ -1,0 +1,46 @@
+
+.navigation-bar--movieList .center{
+    
+}
+
+
+.navigation-bar--movieList .center img{
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}
+
+.movieListHeader{
+    height: 40%;
+    width: 90%;
+    padding: 5%;
+    background-color: orange;
+}
+
+.listImage{
+    height: 70%;
+    width: 100%;
+}
+
+.listTitle{
+    height: 30%;
+    width: 100%;
+    background-color: red;
+}
+
+.movieList{
+    height: 45%;
+    width: 90%;
+    padding: 5%;
+    background-color: purple;
+}
+
+
+
+
+/* common */
+
+.navigation-bar--movieList{
+    background: white;
+}
