@@ -18,7 +18,7 @@ function LibraryCtrl($scope,GetLibraryData,ConnectionService,DeviceCheck,calcRat
     
     // console.log(JSON.stringify(libraryValues));  /*受け取った値の確認用*/
     
-    var libraryId = navi.topPage.pushedOptions.data.param1; //受け取ったパラメータを代入
+    var libraryId = navi.topPage.pushedOptions.data.categoryId; //受け取ったパラメータを代入
     document.querySelector("#myModal").show(); //インジケータを表示
     
     vm.getLibraryData = new GetLibraryData(libraryId); //ライブラリー画面のデータを取得するサービスの呼び出し

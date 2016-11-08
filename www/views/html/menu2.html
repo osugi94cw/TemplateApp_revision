@@ -10,14 +10,11 @@
         </section>
         
         <section class="news">
-            <div class="info">
-                <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('news','')">
+            <div class="info" ng-controller="MenuButtonCtrl as news">
+                <ons-button modifier="menuButton" ng-click="news.newsAlert()">
                     <img src="views/img/menu/information.png" alt="" />
                 </ons-button>
             </div>
-            <!--<div>
-                <ons-button>更新情報</ons-button>
-            </div>-->
         </section>
             
         <section class="buttonArea">
@@ -26,28 +23,37 @@
                     <img src="views/img/menu/girl.png" alt="" />
                 </div>
                 <div class="icon_02">
-                    <div class="sports">
-                        <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L001')">
+                    <div class="sports" ng-controller="MenuButtonCtrl as sports">
+                        <ons-button modifier="menuButton" ng-click="sports.toNextPage()">
                             <img src="views/img/menu/sports.png" alt="" class="menuButton_02" />
                         </ons-button>
+                        <input type="hidden" name="運動部ボタンの遷移先" ng-init="sports.target='views/html/library.html'" ng-model="sports.target" />
+                        <input type="hidden" name="運動部ボタンのページID" ng-init="sports.categoryId='L001'" ng-model="sports.categoryId" />
                     </div>
-                    <div class="culture">
-                    <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L002')">
-                        <img src="views/img/menu/culture.png" alt="" class="menuButton_02" />
-                    </ons-button>
-                        
+                    
+                    <div class="culture" ng-controller="MenuButtonCtrl as culture">
+                        <ons-button modifier="menuButton" ng-click="culture.toNextPage()">
+                            <img src="views/img/menu/culture.png" alt="" class="menuButton_02" />
+                        </ons-button>
+                        <input type="hidden" name="文化部ボタンの遷移先" ng-init="culture.target='views/html/library.html'" ng-model="culture.target" />
+                        <input type="hidden" name="文化部ボタンのページID" ng-init="culture.categoryId='L002'" ng-model="culture.categoryId" />
                     </div>
-                    <div class="schoolLife">
-                        <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L003')">
+                    
+                    
+                    <div class="schoolLife" ng-controller="MenuButtonCtrl as schoolLife">
+                        <ons-button modifier="menuButton" ng-click="schoolLife.toNextPage()">
                             <img src="views/img/menu/schoollife.png" alt="" class="menuButton_02" />
                         </ons-button>
-                        
+                        <input type="hidden" name="学園生活ボタンの遷移先" ng-init="schoolLife.target='views/html/library.html'" ng-model="schoolLife.target" />
+                        <input type="hidden" name="学園生活ボタンのページID" ng-init="schoolLife.categoryId='L003'" ng-model="schoolLife.categoryId" />
                     </div>
-                    <div class="activity">
-                        <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L004')">
+                    
+                    <div class="activity" ng-controller="MenuButtonCtrl as activity">
+                        <ons-button modifier="menuButton" ng-click="activity.toNextPage()">
                             <img src="views/img/menu/activity.png" alt="" class="menuButton_02" />
                         </ons-button>
-                        
+                        <input type="hidden" name="行事ボタンの遷移先" ng-init="activity.target='views/html/library.html'" ng-model="activity.target" />
+                        <input type="hidden" name="行事ボタンのページID" ng-init="activity.categoryId='L004'" ng-model="activity.categoryId" />
                     </div>
                 </div>
                 
@@ -55,30 +61,38 @@
             </section>
             <section class="information_02">
                 <div class="icon_02">
-                    <div class="event">
-                        <ons-button ripple="" modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L005')">
+                    <div class="event" ng-controller="MenuButtonCtrl as event">
+                        <ons-button modifier="menuButton" ng-click="event.toNextPage()">
                             <img src="views/img/menu/event.png" alt="" class="menuButton_02" />
                         </ons-button>
-                        
+                        <input type="hidden" name="イベントボタンの遷移先" ng-init="event.target='views/html/library.html'" ng-model="event.target" />
+                        <input type="hidden" name="イベントボタンのページID" ng-init="event.categoryId='L005'" ng-model="event.categoryId" />
                     </div>
-                    <div class="article">
-                        <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L006')">
+                    
+                    <div class="article" ng-controller="MenuButtonCtrl as article">
+                        <ons-button modifier="menuButton" ng-click="article.toNextPage()">
                             <img src="views/img/menu/article.png" alt="" class="menuButton_02" />
                         </ons-button>
-                        
+                        <input type="hidden" name="記事ボタンの遷移先" ng-init="article.target='views/html/library.html'" ng-model="article.target" />
+                        <input type="hidden" name="記事ボタンのページID" ng-init="article.categoryId='L006'" ng-model="article.categoryId" />
                     </div>
-                    <div class="examination">
-                        <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L007')">
+                    
+                    <div class="examination" ng-controller="MenuButtonCtrl as examination">
+                        <ons-button modifier="menuButton" ng-click="examination.toNextPage()">
                             <img src="views/img/menu/examination.png" alt="" class="menuButton_02" />
                         </ons-button>
-                        
+                        <input type="hidden" name="入試ボタンの遷移先" ng-init="examination.target='views/html/library.html'" ng-model="examination.target" />
+                        <input type="hidden" name="入試ボタンのページID" ng-init="examination.categoryId='L007'" ng-model="examination.categoryId" />
                     </div>
-                    <div class="map">
-                    <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('movieList','L008')">
-                        <img src="views/img/menu/map.png" alt="" class="menuButton_02" />
-                    </ons-button>
-                        
+                    
+                    <div class="map" ng-controller="MenuButtonCtrl as map">
+                        <ons-button modifier="menuButton" ng-click="map.toNextPage()">
+                            <img src="views/img/menu/map.png" alt="" class="menuButton_02" />
+                        </ons-button>
+                        <input type="hidden" name="地図ボタンの遷移先" ng-init="map.target='views/html/library.html'" ng-model="map.target" />
+                        <input type="hidden" name="地図ボタンのページID" ng-init="map.categoryId='L008'" ng-model="map.categoryId" />
                     </div>
+                    
                 </div>
                 <div class="human_02">
                     <img src="views/img/menu/boy.png" alt="" class="menuButton_02" />
@@ -88,10 +102,11 @@
         </section>
         
         <section class="faq">
-            <div class="faqButton">
-                <ons-button modifier="menuButton" ng-click="mc.trantisionFromMenu('faq','')">
+            <div class="faqButton" ng-controller="MenuButtonCtrl as faq">
+                <ons-button modifier="menuButton" ng-click="faq.faqAlert()">
                     <img src="views/img/menu/faq.png" alt="" />
                 </ons-button>
+                
                 
             </div>
         </section>

@@ -36,30 +36,63 @@ function MenuCtrl(calcRatio){
     }
 }
 
+/*星陵アプリ*/
+
 function MenuController(TransitionService){
     
-    this.trantisionFromMenu = function(pageName,value){
-        if(pageName == 'movieList'){
-            var target = 'views/html/library.html';
+}
+
+function MenuButtonCtrl(TransitionService){
+    
+    var vm = this;
+    
+    vm.toNextPage = function(){
+        var options = {
+            animation: 'fade',
+            data: {
+                categoryId: vm.categoryId
+            }
         }
-        else if(pageName == 'news'){
-            var target = 'views/html/news.html';
-        }
-        else if(pageName == 'pdfList'){
-            var target = '';
-        }
-        else if(pageName == 'faq'){
-            var target = 'views/html/faq.html';
-        }
-        var passingValue = value;
-        this.screenTransition = new TransitionService(target, passingValue);
+        // vm.screenTransition = new TransitionService(vm.target, options);
+        
+        ons.notification.alert({
+            title: '',
+            messageHTML: '動画一覧画面を表示予定です。',
+            buttonLabel: 'OK',
+            callback: function(){
+            }
+        });
     }
     
+    
+    
+    vm.newsAlert = function(){
+        ons.notification.alert({
+            title: '',
+            messageHTML: '新着情報画面を表示予定です。',
+            buttonLabel: 'OK',
+            callback: function(){
+            }
+        });
+    }
+    
+    vm.faqAlert = function(){
+        ons.notification.alert({
+            title: '',
+            messageHTML: 'FAQ画面を表示予定です。',
+            buttonLabel: 'OK',
+            callback: function(){
+            }
+        });
+    }
 }
+
+/*ここまで*/
 
 //コントローラーの定義
 angular
     .module('menuModule')
     .controller('LibraryButtonCtrl', ['TransitionService', LibraryButtonCtrl])
     .controller('MenuCtrl', ['calcRatio', MenuCtrl])
-    .controller('MenuController', ['TransitionService',MenuController]);
+    .controller('MenuController', ['TransitionService',MenuController])
+    .controller('MenuButtonCtrl', ['TransitionService',MenuButtonCtrl]);

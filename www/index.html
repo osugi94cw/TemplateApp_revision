@@ -32,9 +32,7 @@
     <script src="scripts/services/device.check.js"></script>
     <script src="scripts/services/calc.gcd.js"></script>
     <script src="scripts/services/calc.ratio.js"></script>
-    <script src="scripts/services/change.to.vertical.css.js"></script>
-    <script src="scripts/services/change.to.horizontal.css.js"></script>
-    <script src="scripts/services/change.orientation.js"></script>
+
     <script src="scripts/services/shared.state.js"></script>
     
     <script src="scripts/services/convert.library.values.js"></script>
@@ -42,20 +40,11 @@
     
     <link rel="stylesheet" href="views/css/common.css">
     <link rel="stylesheet" href="views/css/menu.css">
+    <link rel="stylesheet" href="views/css/menu2.css">
     <link rel="stylesheet" href="views/css/library.css">
     <link rel="stylesheet" href="views/css/contents.css">
-    
-    <link rel="stylesheet" href="views/css/menu2.css">
-    <link rel="stylesheet" href="views/css/movie_list.css">
 
     <script>
-        ons.disableAutoStatusBarFill();
-        ons.ready(function(){
-            if (window.device.platform === 'iOS' && parseFloat(window.device.version) >= 7.0)
-            {
-                document.body.style.marginTop = "20px";
-            }
-        }); 
     </script>
 </head>
 <body ng-controller="AppCtrl as app" id="appBody">
