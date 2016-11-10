@@ -42,7 +42,7 @@ function MenuController(TransitionService){
     
 }
 
-function MenuButtonCtrl(TransitionService){
+function MenuButtonCtrl(TransitionService,MockTransition){
     
     var vm = this;
     
@@ -53,39 +53,22 @@ function MenuButtonCtrl(TransitionService){
                 categoryId: vm.categoryId
             }
         }
-        // vm.screenTransition = new TransitionService(vm.target, options);
         
-        ons.notification.alert({
-            title: '',
-            messageHTML: '動画一覧画面を表示予定です。',
-            buttonLabel: 'OK',
-            callback: function(){
-            }
-        });
-    }
-    
-    
-    
-    vm.newsAlert = function(){
-        ons.notification.alert({
-            title: '',
-            messageHTML: '新着情報画面を表示予定です。',
-            buttonLabel: 'OK',
-            callback: function(){
-            }
-        });
-    }
-    
-    vm.faqAlert = function(){
-        ons.notification.alert({
-            title: '',
-            messageHTML: 'FAQ画面を表示予定です。',
-            buttonLabel: 'OK',
-            callback: function(){
-            }
-        });
+        vm.mockTransition = new MockTransition(vm.target, options);
+        
+        // vm.screenTransition = new TransitionService(vm.target, options); //正式版画面遷移サービス
     }
 }
+
+function MenuFooterCtrl(GetMockData,OpenInAppBrowser){
+    var vm = this;
+    vm.openBrowser = function(){
+        vm.mockData = new GetMockData();
+        var hpAddress = vm.mockData.menu.hpAddress;
+        vm.openInAppBrowser = new OpenInAppBrowser(hpAddress); 
+    }
+}
+
 
 /*ここまで*/
 
@@ -95,4 +78,5 @@ angular
     .controller('LibraryButtonCtrl', ['TransitionService', LibraryButtonCtrl])
     .controller('MenuCtrl', ['calcRatio', MenuCtrl])
     .controller('MenuController', ['TransitionService',MenuController])
-    .controller('MenuButtonCtrl', ['TransitionService',MenuButtonCtrl]);
+    .controller('MenuButtonCtrl', ['TransitionService','MockTransition',MenuButtonCtrl])
+    .controller('MenuFooterCtrl', ['GetMockData','OpenInAppBrowser',MenuFooterCtrl]);
