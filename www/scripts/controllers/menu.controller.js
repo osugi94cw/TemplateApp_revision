@@ -58,12 +58,15 @@ function MenuButtonCtrl(TransitionService,MockTransition){
         
         // vm.screenTransition = new TransitionService(vm.target, options); //正式版画面遷移サービス
     }
+    
+
 }
 
-function MenuFooterCtrl(GetMockData,OpenInAppBrowser){
+function MenuFooterCtrl(GetMockData,OpenInAppBrowser,mockValues){
     var vm = this;
     vm.openBrowser = function(){
         vm.mockData = new GetMockData();
+        console.log(JSON.stringify(mockValues.menu.hpAddress));
         var hpAddress = vm.mockData.menu.hpAddress;
         vm.openInAppBrowser = new OpenInAppBrowser(hpAddress); 
     }
@@ -79,4 +82,4 @@ angular
     .controller('MenuCtrl', ['calcRatio', MenuCtrl])
     .controller('MenuController', ['TransitionService',MenuController])
     .controller('MenuButtonCtrl', ['TransitionService','MockTransition',MenuButtonCtrl])
-    .controller('MenuFooterCtrl', ['GetMockData','OpenInAppBrowser',MenuFooterCtrl]);
+    .controller('MenuFooterCtrl', ['GetMockData','OpenInAppBrowser','mockValues',MenuFooterCtrl]);

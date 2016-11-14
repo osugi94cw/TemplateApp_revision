@@ -2,26 +2,39 @@
         
     <ons-toolbar modifier="movieList">
         <div class="left">
-            <ons-button class="backButton" modifier="" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/back.png" alt="" /></ons-button>
+            <ons-button class="" modifier="headerButton" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/back.png" alt="" /></ons-button>
         </div>
         <div class="center">
-            <ons-button modifier="" ng-click="">
-                <img src="views/img/menu/footer.jpg" alt="" />
-            </ons-button>
+            <img src="views/img/hp.jpg" alt="" />
         </div>
         <div class="right">
-            <ons-button class="backButton" modifier="" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/home.png" alt="" /></ons-button>
+            <ons-button class="" modifier="headerButton" ng-click="navi.resetToPage('views/html/menu2.html', {animation:'lift'})"><img src="views/img/home.png" alt="" /></ons-button>
         </div>
     </ons-toolbar>
     
-    <section class="moviePlayContentsHeader">　ヘッダー
-        <div class="moviePlayContentsHeaderImage">
-            画像配置予定
-            <img src="" alt="" />
-        </div>
-    </section>
+    <div class="movieListPage" style="background: url('views/img/background.jpg'); background-size: cover;">
     
-    <section class="moviePlayContentsList">
-        リスト作成予定
-    </section>
+        <section class="listHeader">
+            <div class="image">
+                <img ng-src="{{mlc.headerImage}}" alt="" />
+            </div>
+        </section>
+        
+        
+        <section class="movieList">
+            <ons-list>
+                <ons-list-item modifier="chevron" tappable class="listItem" ng-repeat="con in content" ng-if="con.categoryId == 1" ng-controller="ListItemCtrl as lic" ng-click="lic.toNextPage()">
+                    <div class="left"> <img class="thumbnail" ng-src="{{con.image}}"> </div>
+                    <div class="center"> <span class="list__item__title">{{con.name}}</span><span class="list__item__subtitle">{{con.description}}</span> </div>
+                    
+                    <input type="hidden" name="名前" ng-init="lic.name=con.name" ng-model="mlc.name" />
+                    <input type="hidden" name="説明" ng-init="lic.description=con.description" ng-model="mlc.description" />
+                    <input type="hidden" name="データ" ng-init="lic.data=con.data" ng-model="mlc.data" />
+                    <input type="hidden" name="動画リストの遷移先" ng-init="lic.target='views/html/movie_play.html'" ng-model="lic.target" />
+                </ons-list-item>
+            </ons-list>
+            
+        </section>
+    
+    </div>
 </ons-page>

@@ -1,57 +1,83 @@
 
-.navigation-bar--movieList .center{
-    
-    
-}
 
-.navigation-bar--movieList .left img{
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
-}
-.navigation-bar--movieList .center img{
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
-    
-    vertical-align: middle;
-}
-.navigation-bar--movieList .right img{
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
-}
 
-.moviePlayContentsHeader{
-    height: 40%;
-    width: 90%;
-    padding: 5%;
-    margin-top: 0%;
-    background-color: orange;
-}
+/* メニュー画面のOnsenUI変更 */
 
-.moviePlayContentsHeader .moviePlayContentsHeaderImage{
-    height: 70%;
+.button--headerButton {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
     width: 100%;
 }
 
-.moviePlayContentsList{
-    height: 45%;
-    width: 90%;
-    padding: 5%;
-    background-color: purple;
-    
-    overflow: scroll;
+.button--headerButton:active {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 
 
+/* ここまで */
 
-/* common */
+
+#movieList img{
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}
+
 
 .navigation-bar--movieList{
-    background: white;
+    background-color: white;
 }
+.navigation-bar--movieList div{
+    text-align: center;
+}
+.navigation-bar--movieList img{
+    vertical-align: middle;
+}
+
+
+#movieList .movieListPage{
+    height: 100%;
+}
+
+
+#movieList .listHeader{
+    height: 35.5%;
+    width: 90%;
+    padding: 3% 5%;
+}
+
+.listHeader .image{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+#movieList .movieList{
+    height: 55.5%;
+    width: 90%;
+    padding: 3% 5%;
+    
+    overflow-y: scroll;
+}
+
+.movieList .listItem{
+    width: 100%;
+    height: 100%;
+}
+
+.listItem .thumbnail{
+    border-radius: 5px;
+    display: block;
+    margin: 0;
+}
+
+
+

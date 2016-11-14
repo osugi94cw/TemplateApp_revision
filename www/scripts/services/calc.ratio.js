@@ -7,7 +7,6 @@ function calcRatio(calcGCD){
     console.log("コンテンツの横幅:" + wiw);
     console.log("コンテンツの縦幅:" + wih);
     var gcd = calcGCD(wiw, wih);
-    console.log("最大公約数：" + gcd);
     console.log("比率は" + (wiw / gcd) + ":" + (wih / gcd) + "です");
     var ratio = 0;
     if (wiw < wih){
@@ -16,7 +15,6 @@ function calcRatio(calcGCD){
     else{
         ratio = (wiw / gcd) / (wih / gcd);
     }
-    console.log("つまり" + ratio + "倍です");
     return ratio;
 }
 
