@@ -1,4 +1,17 @@
 
+#moviePlay{
+    
+}
+#moviePlay .moviePlayPage{
+    height: 100%;
+    overflow: hidden;
+}
+
+#moviePlay .backgroundStar{
+    height: 100%;
+    z-index: 2;
+}
+
 #moviePlay img{
     width:auto;
     height:auto;
@@ -6,9 +19,135 @@
     max-height:100%;
 }
 
+#moviePlay .top{
+    height: 30%;
+    text-align: left;
+    position: relative;
+}
 
+.top .human{
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.top .balloon{
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    top: 20%;
+    right: 0;
+}
 #moviePlay .moviePlayer{
-    margin: 40% 0 0 0;
     height: 40%;
     width: 100%;
+}
+#moviePlay .under{
+    height: 30%;
+    text-align: left;
+    position: relative;
+}
+.under .human{
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.under .balloon{
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+#balloon-2-left {
+    position: relative;
+	display: table-cell;
+	padding: 0 15px;
+	width: auto;
+	min-width: 150px;
+	height: 50%;
+	line-height: 100px;
+	color: #19283C;
+	text-align: center;
+	background: #ABD9FF;
+	border: 3px solid #DFF0FF;
+	z-index: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+#balloon-2-left:before {
+	content: "";
+	position: absolute;
+	top: 50%; left: -8px;
+	margin-top: -9px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	border-color: transparent #ABD9FF transparent transparent;
+	z-index: 0;
+}
+#balloon-2-left:after {
+	content: "";
+	position: absolute;
+	top: 50%; left: -12px;
+	margin-top: -10px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent #DFF0FF transparent transparent;
+	z-index: -1;
+}
+
+
+
+#balloon-1-right {
+    position: relative;
+    display: table-cell;
+	padding: 0 15px;
+	width: auto;
+	min-width: 150px;
+	height: 50%;
+	line-height: 100px;
+	color: #19283C;
+	text-align: center;
+	background: #ABD9FF;
+	border: 3px solid #DFF0FF;
+	z-index: 0;
+    border-radius: 5px;
+    font-size: 10px;
+    vertical-align: middle;
+}
+#balloon-1-right:before {
+    content: "";
+	position: absolute;
+	top: 50%; right: -8px;
+	margin-top: -9px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 9px 0 9px 9px;
+	border-color: transparent transparent transparent #ABD9FF;
+	z-index: 0;
+}
+#balloon-1-right:after {
+	content: "";
+	position: absolute;
+	top: 50%; right: -12px;
+	margin-top: -10px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent #DFF0FF;
+	z-index: -1;
 }

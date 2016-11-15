@@ -1,4 +1,4 @@
-<ons-page id="moviePlay">
+<ons-page id="moviePlay" ng-controller="MoviePlayerCtrl as mpc">
         
     <ons-toolbar modifier="movieList">
         <div class="left">
@@ -12,9 +12,31 @@
         </div>
     </ons-toolbar>
     
-    
-
-    <section class="moviePlayer" ng-controller="MoviePlayerCtrl as mpc">
-        <iframe width="100%" height="100%" ng-src="{{mpc.url}}" frameborder="0" allowfullscreen ng-cloak></iframe>
-    </section>
+    <div class="moviePlayPage" style="background: url('views/img/background.jpg'); background-size: cover;">
+        <div class="backgroundStar" style="background: url('views/img/menu/background_star.png'); background-size: cover;">
+            <div class="top">
+                <div class="human">
+                    <img src="views/img/menu/girl.png" alt="" />
+                </div>
+                <div class="balloon">
+                    <div id="balloon-2-left">
+                        {{mpc.name}}
+                    </div>
+                </div>
+            </div>
+            <section class="moviePlayer">
+                <iframe width="100%" height="100%" ng-src="{{mpc.url}}" frameborder="0" allowfullscreen ng-cloak></iframe>
+            </section>
+            <div class="under">
+                <div class="human">
+                    <img src="views/img/menu/boy.png" alt="" />
+                </div>
+                <div class="balloon">
+                    <div id="balloon-1-right">
+                        {{mpc.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </ons-page>

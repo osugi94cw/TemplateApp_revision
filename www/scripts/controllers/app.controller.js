@@ -30,11 +30,6 @@ function AppCtrl(calcRatio,SharedState,$scope){
         }
     });
     
-    
-    this.openInAppBrowser = function(url){
-        cordova.InAppBrowser.open(encodeURI(url), '_blank', 'location=yes,enableViewportScale=yes');
-    }
-    
 }
 
 

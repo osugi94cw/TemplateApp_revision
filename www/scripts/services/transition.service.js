@@ -1,24 +1,7 @@
 
-/* コントローラから受け取った遷移先のURLと渡したいパラメータを<ons-navigator>のpushPageメソッドに渡すサービス */
+/* 遷移先とoptionsオブジェクトを引数で受け取り、pushPageメソッドを実行するサービス */
 
-function TransitionService(){
-    
-/*テンプレートアプリ*/    
-//    var screenTransition = function(argument1,argument2){
-//        var target = argument1;
-//        var options = {
-//            animation:'fade',   //遷移アニメーションの指定
-//            //渡したいパラメータはdataオブジェクトに格納する
-//            data:{
-//                param1:argument2
-//            }
-//        };
-//        navi.pushPage(target, options); //<ons-navigator>のpushPageメソッドを使用する
-//    };
-//    return screenTransition; 
-    
-    
-/*星陵アプリ*/     
+function ScreenTransition(){
     var screenTransition = function(targetPass,optionsObject){
         var target = targetPass;
         var options = optionsObject;
@@ -27,6 +10,20 @@ function TransitionService(){
     return screenTransition; 
 }
 
+/* 引数でURLを受け取り、アプリ内ブラウザを表示するサービス */
+
+function OpenInAppBrowser(){
+    var openInAppBrowser = function(targetPass){
+        var target = targetPass;
+        cordova.InAppBrowser.open(encodeURI(target), '_blank', 'location=yes,enableViewportScale=yes'); //初期表示時にページ全体が表示される
+    };
+    return openInAppBrowser; 
+}
+
+
+
+
 angular
     .module('transitionModule')
-    .service('TransitionService', TransitionService);
+    .service('ScreenTransition', ScreenTransition)
+    .service('OpenInAppBrowser', OpenInAppBrowser);

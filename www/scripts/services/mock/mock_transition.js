@@ -7,17 +7,11 @@ function MockTransition(){
         var target = targetPass;
         var options = optionsObject;
         
-        if(options.data.categoryId == 'L001' 
-        ){
-            navi.pushPage('views/html/movie_list.html',options);
+        if(options.data.categoryId == '1'){
+            navi.pushPage(target,options);
         }
-        else if(options.data.categoryId == 'L002'
-            || options.data.categoryId == 'L003'
-            || options.data.categoryId == 'L004'
-            || options.data.categoryId == 'L005'
-            || options.data.categoryId == 'L006'
-            || options.data.categoryId == 'L007'
-            || options.data.categoryId == 'L008'){
+        else if(options.data.categoryId == '2'
+            || options.data.categoryId == '3'){
             ons.notification.alert({
                 title: '',
                 messageHTML: '動画一覧画面を表示予定です。',
@@ -25,7 +19,44 @@ function MockTransition(){
                 callback: function(){
                 }
             });
-            }
+        }
+        else if(options.data.categoryId == '4'){
+            ons.notification.alert({
+                title: '',
+                messageHTML: '行事動画一覧画面を表示予定です。',
+                buttonLabel: 'OK',
+                callback: function(){
+                }
+            });
+        }
+        else if(options.data.categoryId == '5'
+            || options.data.categoryId == '6'){
+            ons.notification.alert({
+                title: '',
+                messageHTML: 'PDF一覧画面を表示予定です。',
+                buttonLabel: 'OK',
+                callback: function(){
+                }
+            });
+        }
+        else if(options.data.categoryId == '7'){
+            ons.notification.alert({
+                title: '',
+                messageHTML: '入試区分選択画面を表示予定です。',
+                buttonLabel: 'OK',
+                callback: function(){
+                }
+            });
+        }
+        else if(options.data.categoryId == '8'){
+            ons.notification.alert({
+                title: '',
+                messageHTML: 'アクセス画面を表示予定です。',
+                buttonLabel: 'OK',
+                callback: function(){
+                }
+            });
+        }
         else if(options.data.categoryId == 'news'){
             ons.notification.alert({
                 title: '',
@@ -36,18 +67,8 @@ function MockTransition(){
             });
         }
         else if(target == 'views/html/movie_play.html'){
-            // ons.notification.alert({
-            //     title: '',
-            //     messageHTML: '動画再生画面を表示予定です。',
-            //     buttonLabel: 'OK',
-            //     callback: function(){
-            //     }
-            // });
-            
             navi.pushPage(target,options);
         }
-        
-
     };
     return mockTransition; 
 }

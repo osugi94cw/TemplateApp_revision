@@ -1,22 +1,20 @@
 
-/* */
+/* 動画一覧画面の親コントローラ */
+/* モックデータを呼び出し、画面に反映する */
 
-function MovieListCtrl($scope,GetMockData,mockValues,MockTransition){
+function MovieListCtrl($scope,mockValues){
     var vm = this;
     
-    var optionsData = navi.topPage.pushedOptions.data;
-    vm.mockData = new GetMockData();
-    
-    vm.headerImage = vm.mockData.movieList.headerImage;
-    $scope.listItem = [];
-    $scope.listItem = vm.mockData.movieList.listItem;
-    
-    $scope.content = [];
+    vm.optionsData = navi.topPage.pushedOptions.data;
+    vm.headerImage = mockValues.movieList.headerImage;
     $scope.content = mockValues.movieList.content;
     
 }
 
-function ListItemCtrl(MockTransition){
+/* 動画一覧画面のリストアイテムコントローラ */
+/* toNextPageメソッドからScreenTransition（画面遷移サービス）を呼び出す */
+
+function ListItemCtrl(MockTransition,ScreenTransition){
     var vm = this;
     
     vm.toNextPage = function(){
@@ -28,20 +26,17 @@ function ListItemCtrl(MockTransition){
                 data: vm.data,
             }
         }
-        console.log(vm.name)
         vm.mockTransition = new MockTransition(vm.target, options);
         
-        // vm.screenTransition = new TransitionService(vm.target, options); //正式版画面遷移サービス
+        // vm.screenTransition = new ScreenTransition(vm.target, options); //正式版画面遷移サービス
     }
     
     
 }
 
 
-/*ここまで*/
-
 //コントローラーの定義
 angular
     .module('movieModule')
-    .controller('MovieListCtrl', ['$scope','GetMockData','mockValues','MockTransition',MovieListCtrl])
-    .controller('ListItemCtrl',['MockTransition',ListItemCtrl]);
+    .controller('MovieListCtrl', ['$scope','mockValues',MovieListCtrl])
+    .controller('ListItemCtrl',['MockTransition','ScreenTransition',ListItemCtrl]);

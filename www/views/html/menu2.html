@@ -1,4 +1,4 @@
-<ons-page modifier="menu" id="menu" ng-controller="MenuController as mc">
+<ons-page modifier="menu" id="menu" ng-controller="MenuCtrl as mc">
     <div class="menuPage" style="background: url('views/img/background.jpg'); background-size: cover;">
         <div class="backgroundStar" style="background: url('views/img/menu/background_star.png'); background-size: cover;">
             <section class="title">
@@ -27,16 +27,16 @@
                             <ons-button modifier="menuButton" ng-click="sports.toNextPage()">
                                 <img src="views/img/menu/sports.png" alt="" class="menuButton_02" />
                             </ons-button>
-                            <input type="hidden" name="運動部ボタンの遷移先" ng-init="sports.target='views/html/library.html'" ng-model="sports.target" />
-                            <input type="hidden" name="運動部ボタンのページID" ng-init="sports.categoryId='L001'" ng-model="sports.categoryId" />
+                            <input type="hidden" name="運動部ボタンの遷移先" ng-init="sports.target='views/html/movie_list.html'" ng-model="sports.target" />
+                            <input type="hidden" name="運動部ボタンのページID" ng-init="sports.categoryId='1'" ng-model="sports.categoryId" />
                         </div>
                         
                         <div class="culture icon" ng-controller="MenuButtonCtrl as culture">
                             <ons-button modifier="menuButton" ng-click="culture.toNextPage()">
                                 <img src="views/img/menu/culture.png" alt="" class="menuButton_02" />
                             </ons-button>
-                            <input type="hidden" name="文化部ボタンの遷移先" ng-init="culture.target='views/html/library.html'" ng-model="culture.target" />
-                            <input type="hidden" name="文化部ボタンのページID" ng-init="culture.categoryId='L002'" ng-model="culture.categoryId" />
+                            <input type="hidden" name="文化部ボタンの遷移先" ng-init="culture.target='views/html/movie_list.html'" ng-model="culture.target" />
+                            <input type="hidden" name="文化部ボタンのページID" ng-init="culture.categoryId='2'" ng-model="culture.categoryId" />
                         </div>
                         
                         
@@ -44,8 +44,8 @@
                             <ons-button modifier="menuButton" ng-click="schoolLife.toNextPage()">
                                 <img src="views/img/menu/schoollife.png" alt="" class="menuButton_02" />
                             </ons-button>
-                            <input type="hidden" name="学園生活ボタンの遷移先" ng-init="schoolLife.target='views/html/library.html'" ng-model="schoolLife.target" />
-                            <input type="hidden" name="学園生活ボタンのページID" ng-init="schoolLife.categoryId='L003'" ng-model="schoolLife.categoryId" />
+                            <input type="hidden" name="学園生活ボタンの遷移先" ng-init="schoolLife.target='views/html/movie_list.html'" ng-model="schoolLife.target" />
+                            <input type="hidden" name="学園生活ボタンのページID" ng-init="schoolLife.categoryId='3'" ng-model="schoolLife.categoryId" />
                         </div>
                         
                         <div class="activity icon" ng-controller="MenuButtonCtrl as activity">
@@ -53,7 +53,7 @@
                                 <img src="views/img/menu/activity.png" alt="" class="menuButton_02" />
                             </ons-button>
                             <input type="hidden" name="行事ボタンの遷移先" ng-init="activity.target='views/html/library.html'" ng-model="activity.target" />
-                            <input type="hidden" name="行事ボタンのページID" ng-init="activity.categoryId='L004'" ng-model="activity.categoryId" />
+                            <input type="hidden" name="行事ボタンのページID" ng-init="activity.categoryId='4'" ng-model="activity.categoryId" />
                         </div>
                     </div>
                     
@@ -66,7 +66,7 @@
                                 <img src="views/img/menu/event.png" alt="" class="menuButton" />
                             </ons-button>
                             <input type="hidden" name="イベントボタンの遷移先" ng-init="event.target='views/html/library.html'" ng-model="event.target" />
-                            <input type="hidden" name="イベントボタンのページID" ng-init="event.categoryId='L005'" ng-model="event.categoryId" />
+                            <input type="hidden" name="イベントボタンのページID" ng-init="event.categoryId='5'" ng-model="event.categoryId" />
                         </div>
                         
                         <div class="article icon" ng-controller="MenuButtonCtrl as article">
@@ -74,7 +74,7 @@
                                 <img src="views/img/menu/article.png" alt="" class="menuButton" />
                             </ons-button>
                             <input type="hidden" name="記事ボタンの遷移先" ng-init="article.target='views/html/library.html'" ng-model="article.target" />
-                            <input type="hidden" name="記事ボタンのページID" ng-init="article.categoryId='L006'" ng-model="article.categoryId" />
+                            <input type="hidden" name="記事ボタンのページID" ng-init="article.categoryId='6'" ng-model="article.categoryId" />
                         </div>
                         
                         <div class="examination icon" ng-controller="MenuButtonCtrl as examination">
@@ -82,7 +82,7 @@
                                 <img src="views/img/menu/examination.png" alt="" class="menuButton" />
                             </ons-button>
                             <input type="hidden" name="入試ボタンの遷移先" ng-init="examination.target='views/html/library.html'" ng-model="examination.target" />
-                            <input type="hidden" name="入試ボタンのページID" ng-init="examination.categoryId='L007'" ng-model="examination.categoryId" />
+                            <input type="hidden" name="入試ボタンのページID" ng-init="examination.categoryId='7'" ng-model="examination.categoryId" />
                         </div>
                         
                         <div class="access icon" ng-controller="MenuButtonCtrl as access">
@@ -90,7 +90,7 @@
                                 <img src="views/img/menu/access.png" alt="" class="menuButton" />
                             </ons-button>
                             <input type="hidden" name="地図ボタンの遷移先" ng-init="access.target='views/html/library.html'" ng-model="access.target" />
-                            <input type="hidden" name="地図ボタンのページID" ng-init="access.categoryId='L008'" ng-model="access.categoryId" />
+                            <input type="hidden" name="地図ボタンのページID" ng-init="access.categoryId='8'" ng-model="access.categoryId" />
                         </div>
                         
                     </div>

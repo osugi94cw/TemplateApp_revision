@@ -6,7 +6,7 @@ ons.bootstrap('templateApp',['menuModule','libraryModule','contentsModule','calc
 //子モジュール
 
 
-angular.module('menuModule', ['transitionModule','calcModule','dataModule']);
+angular.module('menuModule', ['transitionModule','dataModule']);
 
 angular.module('movieModule', ['transitionModule','dataModule']);
 

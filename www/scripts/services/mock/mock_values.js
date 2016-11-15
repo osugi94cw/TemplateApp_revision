@@ -1,3 +1,5 @@
+/* モック用のデータを格納 */
+
 angular.module('dataModule')
     .value('mockValues',
     {
@@ -9,36 +11,6 @@ angular.module('dataModule')
         {
             headerImage: 'views/img/sports_clubs.png',
             listItem: [
-            {
-                thumbnail: 'views/img/thumbnail.png',
-                name: 'テニス部',
-                description: 'テニス部です。頑張ります。'
-            },
-            {
-                thumbnail: 'views/img/thumbnail.png',
-                name: 'テニス部',
-                description: 'テニス部です。頑張ります。'
-            },
-            {
-                thumbnail: 'views/img/thumbnail.png',
-                name: 'テニス部',
-                description: 'テニス部です。頑張ります。'
-            },
-            {
-                thumbnail: 'views/img/thumbnail.png',
-                name: 'テニス部',
-                description: 'テニス部です。頑張ります。'
-            },
-            {
-                thumbnail: 'views/img/thumbnail.png',
-                name: 'テニス部',
-                description: 'テニス部です。頑張ります。'
-            },
-            {
-                thumbnail: 'views/img/thumbnail.png',
-                name: 'テニス部',
-                description: 'テニス部です。頑張ります。'
-            },
             {
                 thumbnail: 'views/img/thumbnail.png',
                 name: 'テニス部',
