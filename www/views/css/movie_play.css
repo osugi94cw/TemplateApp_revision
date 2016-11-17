@@ -124,6 +124,7 @@
     border-radius: 5px;
     font-size: 10px;
     vertical-align: middle;
+    word-wrap: break-word;
 }
 #balloon-1-right:before {
     content: "";

@@ -12,7 +12,7 @@ function MenuButtonCtrl(ScreenTransition,MockTransition){
     //optionsオブジェクト(遷移アニメーションやパラメータを設定するオブジェクト)を作成し、transitionサービスに渡す。
     vm.toNextPage = function(){
         var options = {
-            animation: 'fade',
+            animation: 'slide',
             data: {
                 categoryId: vm.categoryId
             }

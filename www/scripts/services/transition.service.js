@@ -5,6 +5,13 @@ function ScreenTransition(){
     var screenTransition = function(targetPass,optionsObject){
         var target = targetPass;
         var options = optionsObject;
+        
+        if(!options || !options.animation){
+            options.animation = 'slide'
+        }
+        
+        
+        
         navi.pushPage(target, options); //<ons-navigator>のpushPageメソッドを使用する
     };
     return screenTransition; 

@@ -8,6 +8,9 @@ function MockTransition(){
         var options = optionsObject;
         
         if(options.data.categoryId == '1'){
+            if(!options || !options.animation){
+                options.animation = 'slide'
+            }
             navi.pushPage(target,options);
         }
         else if(options.data.categoryId == '2'
