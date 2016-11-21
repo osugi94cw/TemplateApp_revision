@@ -24,12 +24,13 @@
         <section class="movieList">
             <ons-list>
                 <ons-list-item modifier="chevron" tappable class="listItem" ng-repeat="con in content" ng-if="con.categoryId == 1" ng-controller="ListItemCtrl as lic" ng-click="lic.toNextPage()">
-                    <div class="left"> <img class="thumbnail" ng-src="{{con.image}}"> </div>
+                    <div class="left"> <img class="list__item__thumbnail thumbnail" ng-src="{{con.image}}"> </div>
                     <div class="center"> <span class="list__item__title">{{con.name}}</span><span class="list__item__subtitle">{{con.description}}</span> </div>
                     
-                    <input type="hidden" name="名前" ng-init="lic.name=con.name" ng-model="mlc.name" />
-                    <input type="hidden" name="説明" ng-init="lic.description=con.description" ng-model="mlc.description" />
-                    <input type="hidden" name="データ" ng-init="lic.data=con.data" ng-model="mlc.data" />
+                    <input type="hidden" name="カテゴリID" ng-init="lic.categoryId=mlc.categoryId" ng-model="lic.categoryId" />
+                    <input type="hidden" name="名前" ng-init="lic.name=con.name" ng-model="lic.name" />
+                    <input type="hidden" name="説明" ng-init="lic.description=con.description" ng-model="lic.description" />
+                    <input type="hidden" name="データ" ng-init="lic.data=con.data" ng-model="lic.data" />
                     <input type="hidden" name="動画リストの遷移先" ng-init="lic.target='views/html/movie_play.html'" ng-model="lic.target" />
                 </ons-list-item>
             </ons-list>

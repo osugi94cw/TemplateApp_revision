@@ -33,7 +33,7 @@
 
 
 .navigation-bar--movieList{
-    background-color: white;
+    background-color: #3DBFF9;
 }
 .navigation-bar--movieList div{
     text-align: center;
@@ -64,8 +64,6 @@
     height: 55.5%;
     width: 90%;
     padding: 3% 5%;
-    
-    overflow-y: scroll;
 }
 
 .movieList .listItem{
@@ -73,10 +71,16 @@
     height: 100%;
 }
 
+.listItem .left{
+    width: 30%;
+}
+
+.listItem .center{
+    width: 70%;
+}
+
 .listItem .thumbnail{
     border-radius: 5px;
-    display: block;
-    margin: 0;
 }
 
 

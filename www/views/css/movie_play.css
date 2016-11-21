@@ -1,15 +1,11 @@
 
 #moviePlay{
-    
 }
+
 #moviePlay .moviePlayPage{
     height: 100%;
     overflow: hidden;
-}
-
-#moviePlay .backgroundStar{
-    height: 100%;
-    z-index: 2;
+    word-break: break-all;
 }
 
 #moviePlay img{
@@ -21,6 +17,7 @@
 
 #moviePlay .top{
     height: 30%;
+    width: 100%;
     text-align: left;
     position: relative;
 }
@@ -34,10 +31,10 @@
 }
 .top .balloon{
     height: 100%;
-    width: 55%;
+    width: 45%;
     position: absolute;
-    top: 20%;
-    right: 0;
+    top: 30%;
+    right: 10%;
 }
 #moviePlay .moviePlayer{
     height: 40%;
@@ -45,7 +42,8 @@
 }
 #moviePlay .under{
     height: 30%;
-    text-align: left;
+    width: 100%;
+    text-align: right;
     position: relative;
 }
 .under .human{
@@ -57,29 +55,28 @@
 }
 .under .balloon{
     height: 100%;
-    width: 55%;
+    width: 50%;
     position: absolute;
     top: 20%;
     left: 5%;
 }
-#balloon-2-left {
+.balloon-left {
     position: relative;
-	display: table-cell;
-	padding: 0 15px;
-	width: auto;
-	min-width: 150px;
-	height: 50%;
-	line-height: 100px;
+    display: inline-block;
+    padding: 5%;
+	width: 100%;
+    max-width: 100%;
+	height: auto;
+    max-height: 100%;
 	color: #19283C;
 	text-align: center;
 	background: #ABD9FF;
 	border: 3px solid #DFF0FF;
 	z-index: 0;
     border-radius: 5px;
-    font-size: 20px;
-    vertical-align: middle;
+    font-size: 5vw;
 }
-#balloon-2-left:before {
+.balloon-left:before {
 	content: "";
 	position: absolute;
 	top: 50%; left: -8px;
@@ -92,7 +89,7 @@
 	border-color: transparent #ABD9FF transparent transparent;
 	z-index: 0;
 }
-#balloon-2-left:after {
+.balloon-left:after {
 	content: "";
 	position: absolute;
 	top: 50%; left: -12px;
@@ -108,25 +105,23 @@
 
 
 
-#balloon-1-right {
+.balloon-right {
     position: relative;
-    display: table-cell;
-	padding: 0 15px;
-	width: auto;
-	min-width: 150px;
-	height: 50%;
-	line-height: 100px;
+    display: inline-block;
+    padding: 5%;
+	width: 100%;
+    max-width: 100%;
+	height: auto;
+    max-height: 100%;
 	color: #19283C;
-	text-align: center;
+	text-align: left;
 	background: #ABD9FF;
 	border: 3px solid #DFF0FF;
 	z-index: 0;
     border-radius: 5px;
-    font-size: 10px;
-    vertical-align: middle;
-    word-wrap: break-word;
+    font-size: 4.5vw;
 }
-#balloon-1-right:before {
+.balloon-right:before {
     content: "";
 	position: absolute;
 	top: 50%; right: -8px;
@@ -139,7 +134,7 @@
 	border-color: transparent transparent transparent #ABD9FF;
 	z-index: 0;
 }
-#balloon-1-right:after {
+.balloon-right:after {
 	content: "";
 	position: absolute;
 	top: 50%; right: -12px;
@@ -151,4 +146,65 @@
 	border-width: 10px 0 10px 10px;
 	border-color: transparent transparent transparent #DFF0FF;
 	z-index: -1;
+}
+
+/* 下記条件に当てはまらない端末 */
+
+
+@media screen and (orientation: portrait){
+    #moviePlay .moviePlayPage{
+        height: 100%;
+    }
+
+}
+
+@media screen and (orientation: landscape){
+
+    #moviePlay .moviePlayPage{
+        height: calc(100% * ((16/9)*(16/9)));
+    }
+}
+
+
+
+/* スマートフォン（16:9) */
+
+@media screen and (orientation: portrait) and (min-width: 320px) and (min-height: 480px){
+    #moviePlay .moviePlayPage{
+        height: 100%;
+    }
+}
+@media screen and (orientation: landscape) and (min-height: 320px) and (min-width: 480px){
+    #moviePlay .moviePlayPage{
+        height: calc(100% * ((16/9)*(16/9)));
+    }
+}
+
+/* タブレット（16:10) */
+
+@media screen and (orientation: portrait) and (min-width: 480px) and (min-height: 768px){
+    #moviePlay .moviePlayPage{
+        height: 100%;
+    }
+}
+
+
+@media screen and (orientation: landscape) and (min-height: 480px) and (min-width: 768px){
+    #moviePlay .moviePlayPage{
+        height: calc(100% * ((16/10)*(16/10)));
+    }
+}
+
+/* iPad系（4:3) */
+
+@media screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1366px) {
+
+    #moviePlay .moviePlayPage{
+        height: 100%;
+    }
+}
+@media screen and (orientation: landscape) and (min-height: 768px) and (max-height: 1024px) and (min-width: 1024px) and (max-width: 1366px) {
+    #moviePlay .moviePlayPage{
+        height: calc(100% * ((4/3)*(4/3)));
+    }
 }
