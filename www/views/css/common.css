@@ -53,5 +53,59 @@ header#header {
 
 /* 星陵 */
 
+/* ヘッダー */
+
+.navigation-bar--appHeader{
+    background-color: #3DBFF9;
+}
+.navigation-bar--appHeader div{
+    text-align: center;
+    width: 33%;
+}
+.navigation-bar--appHeader img{
+    vertical-align: middle;
+}
+
+.button--headerButton {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.button--headerButton:active {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+}
 
 
+
+/* ボタン */
+
+.button--appButton {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.button--appButton:active {
+    background: none;
+    background-color: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.page--material__background{
+    background-color: #3DBFF9;
+}
+
+ons-list.list{
+}

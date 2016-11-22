@@ -2,11 +2,16 @@
 #moviePlay{
 }
 
+/* 要素を配置するdiv */
+/* 要素から文字がはみ出した場合改行される(全ての子要素に継承されている) */
+
 #moviePlay .moviePlayPage{
     height: 100%;
     overflow: hidden;
     word-break: break-all;
 }
+
+/* 動画再生画面内の画像は親の要素の大きさに合わせる(画像比率は保つ) */
 
 #moviePlay img{
     width:auto;
@@ -14,6 +19,8 @@
     max-width:100%;
     max-height:100%;
 }
+
+/* 画面上部動画タイトル */
 
 #moviePlay .top{
     height: 30%;
@@ -36,10 +43,16 @@
     top: 30%;
     right: 10%;
 }
+
+/* 画面中央動画プレイヤー */
+
 #moviePlay .moviePlayer{
     height: 40%;
     width: 100%;
 }
+
+/* 画面下部動画説明 */
+
 #moviePlay .under{
     height: 30%;
     width: 100%;
@@ -60,6 +73,9 @@
     top: 20%;
     left: 5%;
 }
+
+/* 吹き出し */
+
 .balloon-left {
     position: relative;
     display: inline-block;
@@ -148,23 +164,9 @@
 	z-index: -1;
 }
 
-/* 下記条件に当てはまらない端末 */
 
-
-@media screen and (orientation: portrait){
-    #moviePlay .moviePlayPage{
-        height: 100%;
-    }
-
-}
-
-@media screen and (orientation: landscape){
-
-    #moviePlay .moviePlayPage{
-        height: calc(100% * ((16/9)*(16/9)));
-    }
-}
-
+/* 横向き対応 */
+/* 要素を並べているdivを拡大する */
 
 
 /* スマートフォン（16:9) */
@@ -206,5 +208,22 @@
 @media screen and (orientation: landscape) and (min-height: 768px) and (max-height: 1024px) and (min-width: 1024px) and (max-width: 1366px) {
     #moviePlay .moviePlayPage{
         height: calc(100% * ((4/3)*(4/3)));
+    }
+}
+
+/* その他端末 */
+
+
+@media screen and (orientation: portrait){
+    #moviePlay .moviePlayPage{
+        height: 100%;
+    }
+
+}
+
+@media screen and (orientation: landscape){
+
+    #moviePlay .moviePlayPage{
+        height: calc(100% * ((16/9)*(16/9)));
     }
 }

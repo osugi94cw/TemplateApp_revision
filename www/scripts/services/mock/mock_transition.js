@@ -24,13 +24,10 @@ function MockTransition(){
             });
         }
         else if(options.data.categoryId == '4'){
-            ons.notification.alert({
-                title: '',
-                messageHTML: '行事動画一覧画面を表示予定です。',
-                buttonLabel: 'OK',
-                callback: function(){
-                }
-            });
+            if(!options || !options.animation){
+                options.animation = 'slide'
+            }
+            navi.pushPage(target,options);
         }
         else if(options.data.categoryId == '5'
             || options.data.categoryId == '6'){

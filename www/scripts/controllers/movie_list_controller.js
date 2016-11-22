@@ -13,7 +13,7 @@ function MovieListCtrl($scope,mockValues){
 }
 
 /* 動画一覧画面のリストアイテムコントローラ */
-/* toNextPageメソッドからScreenTransition（画面遷移サービス）を呼び出す */
+/* toNextPageメソッドで、optionsオブジェクトを作成し、ScreenTransition（画面遷移サービス）を呼び出す */
 
 function ListItemCtrl(MockTransition,ScreenTransition){
     var vm = this;
@@ -37,7 +37,6 @@ function ListItemCtrl(MockTransition,ScreenTransition){
 }
 
 
-//コントローラーの定義
 angular
     .module('movieModule')
     .controller('MovieListCtrl', ['$scope','mockValues',MovieListCtrl])

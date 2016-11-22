@@ -9,7 +9,7 @@ angular.module('dataModule')
         },
         'movieList':
         {
-            headerImage: 'views/img/sports_clubs.png',
+            headerImage: 'views/img/movie/top_sports.png',
             listItem: [
             {
                 thumbnail: 'views/img/thumbnail.png',

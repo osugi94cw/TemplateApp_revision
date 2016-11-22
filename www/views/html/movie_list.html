@@ -1,20 +1,20 @@
 <ons-page id="movieList" ng-controller="MovieListCtrl as mlc">
         
-    <ons-toolbar modifier="movieList">
+    <ons-toolbar modifier="appHeader">
         <div class="left">
-            <ons-button class="" modifier="headerButton" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/back.png" alt="" /></ons-button>
+            <ons-button class="" modifier="headerButton" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/common/header_back.png" alt="" /></ons-button>
         </div>
         <div class="center">
-            <img src="views/img/hp.jpg" alt="" />
+            <img src="views/img/common/hp.jpg" alt="" />
         </div>
         <div class="right">
-            <ons-button class="" modifier="headerButton" ng-click="navi.resetToPage('views/html/menu2.html', {animation:'lift'})"><img src="views/img/home.png" alt="" /></ons-button>
+            <ons-button class="" modifier="headerButton" ng-click="navi.resetToPage('views/html/menu2.html', {animation:'lift'})"><img src="views/img/common/header_home.png" alt="" /></ons-button>
         </div>
     </ons-toolbar>
     
-    <div class="movieListPage" style="background: url('views/img/background.jpg'); background-size: cover;">
+    <div class="movieListPage" style="background: url('views/img/common/background.jpg'); background-size: cover;">
     
-        <section class="listHeader">
+        <section class="topImage">
             <div class="image">
                 <img ng-src="{{mlc.headerImage}}" alt="" />
             </div>

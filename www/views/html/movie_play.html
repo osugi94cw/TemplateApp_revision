@@ -1,21 +1,21 @@
-<ons-page id="moviePlay" ng-controller="MoviePlayerCtrl as mpc">
+<ons-page id="moviePlay" ng-controller="MoviePlayCtrl as mpc">
         
-    <ons-toolbar modifier="movieList">
+    <ons-toolbar modifier="appHeader">
         <div class="left">
-            <ons-button class="" modifier="headerButton" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/back.png" alt="" /></ons-button>
+            <ons-button class="" modifier="headerButton" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/common/header_back.png" alt="" /></ons-button>
         </div>
         <div class="center">
-            <img src="views/img/hp.jpg" alt="" />
+            <img src="views/img/common/hp.jpg" alt="" />
         </div>
         <div class="right">
-            <ons-button class="" modifier="headerButton" ng-click="navi.resetToPage('views/html/menu2.html', {animation:'lift'})"><img src="views/img/home.png" alt="" /></ons-button>
+            <ons-button class="" modifier="headerButton" ng-click="navi.resetToPage('views/html/menu2.html', {animation:'lift'})"><img src="views/img/common/header_home.png" alt="" /></ons-button>
         </div>
     </ons-toolbar>
     
-    <div class="moviePlayPage" style="background: url('views/img/background.jpg'); background-size: cover;">
+    <div class="moviePlayPage" style="background: url('views/img/common/background.jpg'); background-size: cover;">
         <div class="top">
             <div class="human">
-                <img src="views/img/menu/girl.png" alt="" />
+                <img src="views/img/common/girl.png" alt="" />
             </div>
             <div class="balloon">
                 <span class="balloon-left">
@@ -28,7 +28,7 @@
         </section>
         <div class="under">
             <div class="human">
-                <img src="views/img/menu/boy.png" alt="" />
+                <img src="views/img/common/boy.png" alt="" />
             </div>
             <div class="balloon">
                 <span class="balloon-right">

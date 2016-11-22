@@ -1,0 +1,54 @@
+<ons-page id="activityMovieList" ng-controller="ActivityMovieListCtrl as amlc">
+        
+    <ons-toolbar modifier="appHeader">
+        <div class="left">
+            <ons-button class="" modifier="headerButton" ng-click="navi.popPage({animation:'slide'})"><img src="views/img/common/header_back.png" alt="" /></ons-button>
+        </div>
+        <div class="center">
+            <img src="views/img/common/hp.jpg" alt="" />
+        </div>
+        <div class="right">
+            <ons-button class="" modifier="headerButton" ng-click="navi.resetToPage('views/html/menu2.html', {animation:'lift'})"><img src="views/img/common/header_home.png" alt="" /></ons-button>
+        </div>
+    </ons-toolbar>
+    
+    <div class="activityMovieListPage">
+    
+        <section class="topImage">
+            <div class="image">
+                <img ng-src="views/img/movie/top_activity.png" alt="" />
+            </div>
+        </section>
+        
+        <section class="filterButton">
+            <div class="juniorHighSchool">
+                <ons-button modifier="appButton" ng-click="amlc.filteringJunior()">
+                    <img ng-src="{{amlc.juniorFilterImg}}" alt="" />
+                </ons-button>
+            </div>
+            <div class="highSchool">
+                <ons-button modifier="appButton" ng-click="amlc.filteringHigh()">
+                    <img ng-src="{{amlc.highFilterImg}}" alt="" />
+                </ons-button>
+            </div>
+        </section>
+        
+        
+        <section class="activityMovieList">
+            <ons-list class="list">
+                <ons-list-item modifier="chevron" tappable class="listItem" ng-repeat="con in content" ng-if="con.type == amlc.filter1 || con.type == amlc.filter2 " ng-controller="ActivityListItemCtrl as alic" ng-click="alic.toNextPage()">
+                    <div class="left"> <img class="list__item__thumbnail thumbnail" ng-src="{{con.image}}"> </div>
+                    <div class="center"> <span class="list__item__title">{{con.name}}</span><span class="list__item__subtitle">{{con.description}}</span> </div>
+                    
+                    <input type="hidden" name="カテゴリID" ng-init="alic.categoryId=amlc.categoryId" ng-model="alic.categoryId" />
+                    <input type="hidden" name="名前" ng-init="alic.name=con.name" ng-model="alic.name" />
+                    <input type="hidden" name="説明" ng-init="alic.description=con.description" ng-model="alic.description" />
+                    <input type="hidden" name="データ" ng-init="alic.data=con.data" ng-model="alic.data" />
+                    <input type="hidden" name="動画リストの遷移先" ng-init="alic.target='views/html/movie_play.html'" ng-model="alic.target" />
+                </ons-list-item>
+            </ons-list>
+            
+        </section>
+    
+    </div>
+</ons-page>
