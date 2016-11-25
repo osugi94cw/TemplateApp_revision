@@ -1,6 +1,7 @@
 
-/* 動画一覧画面の親コントローラ */
-/* モックデータを呼び出し、画面に反映する */
+/* 行事動画一覧画面の親コントローラ */
+/* 受け取ったcategoryIdをもとにデータを取得し、ビューに反映する */
+/* フィルタボタン押下でフィルタ条件とフィルタ画像を切り替える */
 
 function ActivityMovieListCtrl($scope,mockValues){
     var vm = this;
@@ -10,42 +11,54 @@ function ActivityMovieListCtrl($scope,mockValues){
     
     $scope.content = mockValues.movieList.content;
     
+    //フィルタ条件
     vm.filter1 = 'junior_high_school';
     vm.filter2 = 'high_school';
 
+    //フィルタボタンタップフラグ
     vm.juniorFilterTapped = false;
     vm.highFilterTapped = false;
     
+    //フィルタ画像
     vm.juniorFilterImg = "views/img/movie/filter_junior_off.png";
     vm.highFilterImg = "views/img/movie/filter_high_off.png";
+
+
+    /* 中学フィルタボタンタップ時に動作するメソッド */
+    /* ボタンのタップフラグを切り替え、データ切り替えメソッドを呼び出す */
 
     vm.filteringJunior = function () {
         vm.highFilterTapped = false;
         if (vm.juniorFilterTapped == false) {
             vm.juniorFilterTapped = true;
-            vm.dataChange();
+            vm.switchData();
             
         }
         else if(vm.juniorFilterTapped == true) {
             vm.juniorFilterTapped = false;
-            vm.dataChange();
+            vm.switchData();
         }
     }
+
+    /* 高校フィルタボタンタップ時に動作するメソッド */
+    /* ボタンのタップフラグを切り替え、データ切り替えメソッドを呼び出す */
 
     vm.filteringHigh = function () {
         vm.juniorFilterTapped = false;
         if (vm.highFilterTapped == false) {
             vm.highFilterTapped = true;
-            vm.dataChange();
+            vm.switchData();
 
         }
         else if (vm.highFilterTapped == true) {
             vm.highFilterTapped = false;
-            vm.dataChange();
+            vm.switchData();
         }
     }
 
-    vm.dataChange = function () {
+    /* タップフラグによってデータを切り替えるメソッド */
+
+    vm.switchData = function () {
         if (vm.juniorFilterTapped == true) {
             vm.juniorFilterImg = "views/img/movie/filter_junior_on_2.png";
             vm.filter2 = 'blank';
@@ -67,7 +80,7 @@ function ActivityMovieListCtrl($scope,mockValues){
     }
 }
 
-/* 動画一覧画面のリストアイテムコントローラ */
+/* 行事動画一覧画面のリストアイテムコントローラ */
 /* toNextPageメソッドで、optionsオブジェクトを作成し、ScreenTransition（画面遷移サービス）を呼び出す */
 
 function ActivityListItemCtrl(MockTransition,ScreenTransition){

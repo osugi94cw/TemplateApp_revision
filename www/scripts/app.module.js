@@ -8,7 +8,7 @@ ons.bootstrap('templateApp',['menuModule','libraryModule','contentsModule','calc
 
 angular.module('menuModule', ['transitionModule','dataModule']);
 
-angular.module('movieModule', ['transitionModule','dataModule']);
+angular.module('movieModule', ['transitionModule', 'dataModule', 'ncmbModule']);
 
 angular.module('libraryModule', ['transitionModule','connectionModule','repeatFinishedModule','ncmbModule', 'deviceCheckModule','calcModule','shareModule','convertValuesModule']);
 
