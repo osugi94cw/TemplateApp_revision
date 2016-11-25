@@ -2,33 +2,32 @@
 /* 動画一覧画面の親コントローラ */
 /* モックデータを呼び出し、画面に反映する */
 
-function MovieListCtrl($scope, mockValues, NcmbValues, GetObject) {
+function MovieListCtrl($scope, mockValues, GetObject) {
     var vm = this;
+
+    document.querySelector("#myModal").show();
     
     vm.optionsData = navi.topPage.pushedOptions.data;
     vm.categoryId = vm.optionsData.categoryId;
     vm.headerImage = mockValues.movieList.headerImage;
-    $scope.content = mockValues.movieList.content;
-    
-    
+
     // 以下データ取得テスト用
-    
-    vm.ncmbValues = new NcmbValues('library');
-    
-    var fetch = {
+
+    var getTerm = {
         className: 'content',
-        searchConditionField: 'categoryId',
-        searchConditionValue: vm.categoryId,
-        orderConditionField: 'createDate',
-        orderConditionValue: true 
+        searchTermField: 'categoryId',
+        searchTermValue: vm.categoryId,
+        orderTermField: 'createDate',
+        orderTermValue: true 
     }
-    vm.getObject = new GetObject(fetch);
+    vm.getObject = new GetObject(getTerm);
 
     $scope.$on('objectGot', function (event, getResult) {
-        console.log(JSON.stringify(getResult.data[0].name));
-    });
+        $scope.content = getResult;
+        console.log(JSON.stringify($scope.content));
+        $scope.$apply();
 
-    
+    });
 }
 
 /* 動画一覧画面のリストアイテムコントローラ */
@@ -58,5 +57,5 @@ function ListItemCtrl(MockTransition,ScreenTransition){
 
 angular
     .module('movieModule')
-    .controller('MovieListCtrl', ['$scope', 'mockValues', 'NcmbValues', 'GetObject', MovieListCtrl])
+    .controller('MovieListCtrl', ['$scope', 'mockValues', 'GetObject', MovieListCtrl])
     .controller('ListItemCtrl',['MockTransition','ScreenTransition',ListItemCtrl]);
